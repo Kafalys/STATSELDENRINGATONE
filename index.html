@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tone — Elden Ring | Fin de l'aventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <main class="page">
+        <header class="hero reveal">
+            <p class="eyebrow">ELDEN RING</p>
+            <h1>SANS-ÉCLAT</h1>
+            <p class="hero-subtitle">La fin de l'aventure de Tone</p>
+            <div class="gold-line"></div>
+            <p class="completed">RUN EN COURS — BILAN FINAL À VENIR</p>
+        </header>
+
+        <section class="section reveal" id="run-summary">
+            <div class="section-heading">
+                <span class="ornament">✦</span>
+                <h2>Bilan de la run</h2>
+                <span class="ornament">✦</span>
+            </div>
+
+            <div class="hero-stat">
+                <span class="hero-stat-value" id="boss-killed-main">0 / 165</span>
+                <span class="hero-stat-label">BOSS VAINCUS</span>
+                <span class="hero-stat-sub" id="boss-percent-main">0 % de l'ensemble des boss</span>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card important">
+                    <span class="stat-value" id="major-bosses">0 / 15</span>
+                    <span class="stat-label">BOSS MAJEURS</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-value" id="total-deaths">0</span>
+                    <span class="stat-label">MORTS TOTALES</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-value" id="first-try-count">0 / 0</span>
+                    <span class="stat-label">FIRST TRY</span>
+                    <span class="stat-note" id="first-try-percent">0 %</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-value" id="days-count">0</span>
+                    <span class="stat-label">JOURS DE RUN</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-value" id="avg-deaths">0,00</span>
+                    <span class="stat-label">TENTATIVES / BOSS</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section reveal" id="stream-summary">
+            <div class="section-heading">
+                <span class="ornament">✦</span>
+                <h2>Le stream</h2>
+                <span class="ornament">✦</span>
+            </div>
+
+            <div class="stream-grid">
+                <article class="stream-card">
+                    <span class="stream-value" id="stream-time">00h00</span>
+                    <span class="stat-label">TEMPS DE STREAM</span>
+                </article>
+                <article class="stream-card">
+                    <span class="stream-value" id="game-time">00h00</span>
+                    <span class="stat-label">TEMPS DE JEU</span>
+                </article>
+                <article class="stream-card">
+                    <span class="stream-value" id="subs">0</span>
+                    <span class="stat-label">SUBS</span>
+                </article>
+                <article class="stream-card">
+                    <span class="stream-value" id="shop-points">0</span>
+                    <span class="stat-label">POINTS DÉPENSÉS</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section reveal" id="daily-bosses">
+            <div class="section-heading">
+                <span class="ornament">✦</span>
+                <h2>Les boss de l'aventure</h2>
+                <span class="ornament">✦</span>
+            </div>
+
+            <div class="day-tabs" id="day-tabs" aria-label="Choisir un jour"></div>
+
+            <div class="day-panel" id="day-panel">
+                <div class="day-panel-header">
+                    <div>
+                        <span class="small-title">JOUR</span>
+                        <h3 id="selected-day-title">1</h3>
+                    </div>
+                    <div class="day-totals">
+                        <div>
+                            <strong id="day-boss-count">0</strong>
+                            <span>BOSS</span>
+                        </div>
+                        <div>
+                            <strong id="day-attempts">0</strong>
+                            <span>TENTATIVES</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-list" id="boss-list"></div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="top-five">
+            <div class="section-heading">
+                <span class="ornament">✦</span>
+                <h2>Les plus meurtriers</h2>
+                <span class="ornament">✦</span>
+            </div>
+            <p class="section-intro">Les cinq boss ayant demandé le plus de tentatives.</p>
+            <div class="ranking-list" id="top-five-list"></div>
+        </section>
+
+        <section class="section reveal" id="records">
+            <div class="section-heading">
+                <span class="ornament">✦</span>
+                <h2>Les records de la run</h2>
+                <span class="ornament">✦</span>
+            </div>
+
+            <div class="records-grid">
+                <article class="record-card">
+                    <span class="record-symbol">☠</span>
+                    <span class="record-title">BOSS LE PLUS MEURTRIER</span>
+                    <strong id="record-boss">—</strong>
+                    <span id="record-boss-value">—</span>
+                </article>
+                <article class="record-card">
+                    <span class="record-symbol">⚔</span>
+                    <span class="record-title">JOUR LE PLUS PRODUCTIF</span>
+                    <strong id="record-productive-day">—</strong>
+                    <span id="record-productive-value">—</span>
+                </article>
+                <article class="record-card">
+                    <span class="record-symbol">💀</span>
+                    <span class="record-title">JOUR LE PLUS MEURTRIER</span>
+                    <strong id="record-deadly-day">—</strong>
+                    <span id="record-deadly-value">—</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section reveal" id="chronology">
+            <div class="section-heading">
+                <span class="ornament">✦</span>
+                <h2>Chronologie</h2>
+                <span class="ornament">✦</span>
+            </div>
+            <p class="section-intro">Les boss majeurs, dans l'ordre où ils sont tombés.</p>
+            <div class="timeline" id="timeline"></div>
+        </section>
+
+        <footer class="footer reveal">
+            <div class="gold-line"></div>
+            <p class="footer-title">SANS-ÉCLAT</p>
+            <p class="footer-subtitle">L'aventure n'est pas encore terminée.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
