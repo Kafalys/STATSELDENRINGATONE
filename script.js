@@ -5,6 +5,16 @@ let selectedDay = null;
 
 const $ = (id) => document.getElementById(id);
 
+function setText(id, value) {
+    const element = $(id);
+
+    if (element) {
+        element.textContent = value;
+    } else {
+        console.warn(`Élément #${id} introuvable dans le HTML.`);
+    }
+}
+
 function formatNumber(value) {
     if (value === null || value === undefined || value === "") return "—";
     return new Intl.NumberFormat("fr-FR").format(value);
@@ -19,37 +29,52 @@ function renderSummary() {
     const g = RUN_DATA.global || {};
     const stream = RUN_DATA.stream || {};
 
-    const bossPercent = g.totalBosses ? (g.bossesVaincus / g.totalBosses) * 100 : 0;
-    const firstTryPercent = g.bossesVaincus ? (g.firstTry / g.bossesVaincus) * 100 : 0;
+    const bossPercent = g.totalBosses
+        ? (g.bossesVaincus / g.totalBosses) * 100
+        : 0;
 
-    $("boss-killed-main").textContent =
-        `${formatNumber(g.bossesVaincus)} / ${formatNumber(g.totalBosses)}`;
+    const firstTryPercent = g.bossesVaincus
+        ? (g.firstTry / g.bossesVaincus) * 100
+        : 0;
 
-    $("boss-percent-main").textContent =
-        `${formatPercent(bossPercent)} de l'ensemble des boss`;
+    setText(
+        "boss-killed-main",
+        `${formatNumber(g.bossesVaincus)} / ${formatNumber(g.totalBosses)}`
+    );
 
-    $("major-bosses").textContent =
-        `${formatNumber(g.bossesMajeursVaincus)} / ${formatNumber(g.totalBossesMajeurs)}`;
+    setText(
+        "boss-percent-main",
+        `${formatPercent(bossPercent)} de l'ensemble des boss`
+    );
 
-    $("total-deaths").textContent = formatNumber(g.mortsTotales);
+    setText(
+        "major-bosses",
+        `${formatNumber(g.bossesMajeursVaincus)} / ${formatNumber(g.totalBossesMajeurs)}`
+    );
 
-    $("first-try-count").textContent = formatNumber(g.firstTry);
+    setText("total-deaths", formatNumber(g.mortsTotales));
 
-    $("first-try-percent").textContent = formatPercent(firstTryPercent);
+    setText("first-try-count", formatNumber(g.firstTry));
 
-$("zones-visited").textContent =
-    `${formatNumber(g.zonesVisitees)} / ${formatNumber(g.zonesTotale)}`;
+    setText("first-try-percent", formatPercent(firstTryPercent));
 
-$("avg-attempts").textContent =
-    g.moyenneTentatives !== undefined
-        ? Number(g.moyenneTentatives).toFixed(2).replace(".", ",")
-        : "—";
+    setText(
+        "zones-visited",
+        `${formatNumber(g.zonesVisitees)} / ${formatNumber(g.zonesTotale)}`
+    );
 
-    $("days-count").textContent = formatNumber(stream.joursDeRun);
-    $("stream-time").textContent = stream.streamTime ?? "—";
-    $("game-time").textContent = stream.gameTime ?? "—";
-    $("subs").textContent = formatNumber(stream.subs);
-    $("shop-points").textContent = formatNumber(stream.shopPoints);
+    setText(
+        "avg-attempts",
+        g.moyenneTentatives !== undefined
+            ? Number(g.moyenneTentatives).toFixed(2).replace(".", ",")
+            : "—"
+    );
+
+    setText("days-count", formatNumber(stream.joursDeRun));
+    setText("stream-time", stream.streamTime ?? "—");
+    setText("game-time", stream.gameTime ?? "—");
+    setText("subs", formatNumber(stream.subs));
+    setText("shop-points", formatNumber(stream.shopPoints));
 }
 
 function getDays() {
@@ -144,6 +169,7 @@ function renderDay(day) {
 
             result.appendChild(attempts);
         }
+
         row.appendChild(name);
         row.appendChild(result);
 
@@ -274,6 +300,7 @@ function renderTimeline() {
         timeline.appendChild(item);
     });
 }
+
 async function init() {
     try {
 
