@@ -15,7 +15,7 @@
             <h1>SANS-ÉCLAT</h1>
             <p class="hero-subtitle">La fin de l'aventure de Tone</p>
             <div class="gold-line"></div>
-            <p class="completed">RUN EN COURS — BILAN FINAL À VENIR</p>
+            <p class="completed">ELDEN RING — COMPLETED</p>
         </header>
 
         <section class="section reveal" id="run-summary">
@@ -41,17 +41,17 @@
                     <span class="stat-label">MORTS TOTALES</span>
                 </article>
                 <article class="stat-card">
-                    <span class="stat-value" id="first-try-count">0 / 0</span>
+                    <span class="stat-value" id="zones-visited">0 / 18</span>
+                    <span class="stat-label">ZONES VISITÉES</span>
+                </article>         
+                <article class="stat-card">
+                    <span class="stat-value" id="first-try-count">0</span>
                     <span class="stat-label">FIRST TRY</span>
                     <span class="stat-note" id="first-try-percent">0 %</span>
                 </article>
                 <article class="stat-card">
-                    <span class="stat-value" id="days-count">0</span>
-                    <span class="stat-label">JOURS DE RUN</span>
-                </article>
-                <article class="stat-card">
-                    <span class="stat-value" id="avg-deaths">0,00</span>
-                    <span class="stat-label">TENTATIVES / BOSS</span>
+                    <span class="stat-value" id="avg-attempts">0,00</span>
+                    <span class="stat-label">TRY / BOSS</span>
                 </article>
             </div>
         </section>
@@ -64,6 +64,10 @@
             </div>
 
             <div class="stream-grid">
+                <article class="stream-card">
+                    <span class="stream-value" id="days-count">0</span>
+                    <span class="stat-label">JOURS DE RUN</span>
+                </article>
                 <article class="stream-card">
                     <span class="stream-value" id="stream-time">00h00</span>
                     <span class="stat-label">TEMPS DE STREAM</span>
@@ -104,8 +108,8 @@
                             <span>BOSS</span>
                         </div>
                         <div>
-                            <strong id="day-attempts">0</strong>
-                            <span>TENTATIVES</span>
+                            <strong id="day-deaths">0</strong>
+                            <span>MORTS</span>
                         </div>
                     </div>
                 </div>
@@ -117,10 +121,10 @@
         <section class="section reveal" id="top-five">
             <div class="section-heading">
                 <span class="ornament">✦</span>
-                <h2>Les plus meurtriers</h2>
+                <h2>Les plus de tentatives</h2>
                 <span class="ornament">✦</span>
             </div>
-            <p class="section-intro">Les cinq boss ayant demandé le plus de tentatives.</p>
+            <p class="section-intro">Les cinq boss ayant demandé le plus de tentatives sur l’ensemble de la run.</p>
             <div class="ranking-list" id="top-five-list"></div>
         </section>
 
@@ -133,8 +137,8 @@
 
             <div class="records-grid">
                 <article class="record-card">
-                    <span class="record-symbol">☠</span>
-                    <span class="record-title">BOSS LE PLUS MEURTRIER</span>
+                    <span class="record-symbol">✦</span>
+                    <span class="record-title">BOSS AYANT DEMANDÉ LE PLUS DE TENTATIVES</span>
                     <strong id="record-boss">—</strong>
                     <span id="record-boss-value">—</span>
                 </article>
@@ -145,7 +149,7 @@
                     <span id="record-productive-value">—</span>
                 </article>
                 <article class="record-card">
-                    <span class="record-symbol">💀</span>
+                    <span class="record-symbol">✦</span>
                     <span class="record-title">JOUR LE PLUS MEURTRIER</span>
                     <strong id="record-deadly-day">—</strong>
                     <span id="record-deadly-value">—</span>
@@ -159,14 +163,14 @@
                 <h2>Chronologie</h2>
                 <span class="ornament">✦</span>
             </div>
-            <p class="section-intro">Les boss majeurs, dans l'ordre où ils sont tombés.</p>
+            <p class="section-intro">Les boss principaux, dans l'ordre où ils sont tombés.</p>
             <div class="timeline" id="timeline"></div>
         </section>
 
         <footer class="footer reveal">
             <div class="gold-line"></div>
             <p class="footer-title">SANS-ÉCLAT</p>
-            <p class="footer-subtitle">L'aventure n'est pas encore terminée.</p>
+            <p class="footer-subtitle">Ici s’achève l’odyssée de Tone.</p>
         </footer>
     </main>
 

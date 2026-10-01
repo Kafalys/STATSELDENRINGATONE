@@ -1,0 +1,178 @@
+{
+  "global": {
+    "bossesVaincus": 81,
+    "totalBosses": 165,
+    "bossesMajeursVaincus": 10,
+    "totalBossesMajeurs": 15,
+    "mortsTotales": 782,
+    "firstTry": 27,
+    "moyenneTentatives": 6.54,
+    "zonesVisitees": 17,
+    "zonesTotale": 18
+  },
+  "stream": {
+    "joursDeRun": 7,
+    "streamTime": "147h",
+    "gameTime": "68h32",
+    "subs": 1310,
+    "shopPoints": 48500
+  },
+  "days": [
+    { "day": 1, "bossesVaincus": 5, "morts": 27 },
+    { "day": 2, "bossesVaincus": 10, "morts": 145 },
+    { "day": 3, "bossesVaincus": 15, "morts": 100 },
+    { "day": 4, "bossesVaincus": 11, "morts": 94 },
+    { "day": 5, "bossesVaincus": 19, "morts": 137 },
+    { "day": 6, "bossesVaincus": 13, "morts": 60 },
+    { "day": 7, "bossesVaincus": 8, "morts": 237 },
+    { "day": 8, "bossesVaincus": null, "morts": null }
+  ],
+  "topAttempts": [
+    { "boss": "Malenia, Blade of Miquella", "attempts": 9999 },
+    { "boss": "Mogh le seigneur de sang", "attempts": 45 },
+    { "boss": "Oiseau de mort", "attempts": 39 },
+    { "boss": "Chevalier du Creuset / Chimère guerrière", "attempts": 35 },
+    { "boss": "Godrick le Greffé", "attempts": 33 }
+  ],
+  "records": {
+    "bossLePlusDeTentatives": "Malenia, Blade of Miquella",
+    "bossLePlusDeTentativesValeur": 9999,
+    "jourPlusDeBoss": 5,
+    "jourPlusDeMorts": 7
+  },
+  "majorBosses": [
+    { "name": "Margit, le Déchu", "day": 1 },
+    { "name": "Godrick le Greffé", "day": 2 },
+    { "name": "Rennala, Reine de la Pleine Lune", "day": 3 },
+    { "name": "Radahn, Fléau des Astres", "day": 4 },
+    { "name": "Rykard, Seigneur du Blasphème", "day": 6 },
+    { "name": "Morgott, Roi des Réprouvés", "day": 4 },
+    { "name": "Godfrey, premier Seigneur d'Elden", "day": 4 },
+    { "name": "Mohg, Seigneur du Sang", "day": 7 },
+    { "name": "Géant de Feu", "day": 6 },
+    { "name": "Maliketh, la Lame d'Ébène", "day": 7 },
+    { "name": "Radagon de l'Ordre d'Or", "day": null },
+    { "name": "Bête d'Elden", "day": null },
+    { "name": "Hoarah Loux, guerrier", "day": null },
+    { "name": "Seigneur dragon Placidusax", "day": 7 },
+    { "name": "Malenia, Blade of Miquella", "day": null }             
+  ],
+  "bossesByDay": [
+    {
+      "day": 1,
+      "bosses": [
+        { "name": "Margit le Déchu", "attempts": 8, "firstTry": false },
+        { "name": "Darriwil, chevalier-limier", "attempts": 3, "firstTry": false },
+        { "name": "Tête de citrouille démente", "attempts": 3, "firstTry": false },
+        { "name": "Homme-bête de Farum Azula", "attempts": 2, "firstTry": false },
+        { "name": "Rick, soldat de Dieu", "attempts": 1, "firstTry": true }
+      ]
+    },
+    {
+      "day": 2,
+      "bosses": [
+        { "name": "Godrick le Greffé", "attempts": 33, "firstTry": false },
+        { "name": "Avatar de l'Arbre-Monde", "attempts": 20, "firstTry": false },
+        { "name": "Soldat Draconique de Nokstella", "attempts": 14, "firstTry": false },
+        { "name": "Ombre du cimetière", "attempts": 11, "firstTry": false },
+        { "name": "Sentinelle de l'Arbre", "attempts": 2, "firstTry": false },
+        { "name": "Duo Chef semi-humain", "attempts": 2, "firstTry": false },
+        { "name": "Duelliste gardien du tombeau", "attempts": 1, "firstTry": true },
+        { "name": "Avatar de l'Arbre-Monde (Péninsule)", "attempts": 1, "firstTry": true },
+        { "name": "Chimère léonine", "attempts": 1, "firstTry": true },
+        { "name": "Nocher Diaphane", "attempts": 1, "firstTry": true }
+      ]
+    },
+    {
+        "day": 3,
+        "bosses": [
+          { "name": "Avatar putride", "attempts": 17, "firstTry": false },
+          { "name": "Commandant O'Neil", "attempts": 10, "firstTry": false },
+          { "name": "Ekzykes le Putréfié", "attempts": 10, "firstTry": false },
+          { "name": "Smarag, dragon de pierre d'éclat", "attempts": 4, "firstTry": false },
+          { "name": "Loup cramoisi de Radagon", "attempts": 4, "firstTry": false },
+          { "name": "Agheel, dragon volant", "attempts": 2, "firstTry": false },
+          { "name": "Rennala, reine de la pleine lune", "attempts": 2, "firstTry": false },
+          { "name": "Parfumeuse Tricia & Misbegotten", "attempts": 2, "firstTry": false },
+          { "name": "Esprit ancestral", "attempts": 2, "firstTry": false },
+          { "name": "Soldat Dragonkin", "attempts": 2, "firstTry": false },
+          { "name": "Makar, le Dragon du magma", "attempts": 1, "firstTry": true },
+          { "name": "Chimère écailleuse", "attempts": 1, "firstTry": true },
+          { "name": "Créature tellurique", "attempts": 1, "firstTry": true },
+          { "name": "Duelliste frénétique", "attempts": 1, "firstTry": true },
+          { "name": "Nochier dragon volant", "attempts": 1, "firstTry": true }
+        ]
+      },
+      {
+        "day": 4,
+        "bosses": [
+          { "name": "Sentinelle draconique de l'Arbre", "attempts": 33, "firstTry": false },
+          { "name": "Morgott, roi des Réprouvés", "attempts": 15, "firstTry": false },
+          { "name": "Radahn, le Fléau des astres", "attempts": 4, "firstTry": false },
+          { "name": "Godfrey, premier Seigneur d'Elden", "attempts": 4, "firstTry": false },
+          { "name": "Veilleur de l'Arbre-Monde Duo", "attempts": 3, "firstTry": false },
+          { "name": "Apôtre de la Peau de Dieu", "attempts": 2, "firstTry": false },
+          { "name": "Duo Chevalier de la Noble putréfaction", "attempts": 1, "firstTry": true },
+          { "name": "Dragon du magma", "attempts": 1, "firstTry": true },
+          { "name": "Wormface", "attempts": 1, "firstTry": true },
+          { "name": "Tibia Mariner", "attempts": 1, "firstTry": true },
+          { "name": "Seigneur d'onyx", "attempts": 1, "firstTry": true }
+        ]
+      },
+      {
+        "day": 5,
+        "bosses": [
+          { "name": "Oiseau de mort", "attempts": 39, "firstTry": false },
+          { "name": "Bête Fallingstar adulte", "attempts": 18, "firstTry": false },
+          { "name": "Adepte de la Lame d'ébène (Caelid)", "attempts": 15, "firstTry": false },
+          { "name": "Commandant Niall", "attempts": 13, "firstTry": false },
+          { "name": "Apôtre à la peau divine et Noble à la peau divine", "attempts": 12, "firstTry": false },
+          { "name": "Magma Wyrm", "attempts": 8, "firstTry": false },
+          { "name": "Vyke, Chevalier de la Table Ronde", "attempts": 6, "firstTry": false },
+          { "name": "Avatar putride", "attempts": 5, "firstTry": false },
+          { "name": "Adepte de la Lame d'ébène", "attempts": 3, "firstTry": false },
+          { "name": "Jumeaux funestes", "attempts": 2, "firstTry": false },
+          { "name": "Esprit de l'arbre ulcéré", "attempts": 2, "firstTry": false },
+          { "name": "Adepte de la Lame d'ébène (Montagne des géants)", "attempts": 1, "firstTry": true },
+          { "name": "Greyll, dragon volant", "attempts": 1, "firstTry": true },
+          { "name": "Apôtre sanctechair", "attempts": 1, "firstTry": true },
+          { "name": "Reine demi-humaine Margot", "attempts": 1, "firstTry": true },
+          { "name": "Les Gens de la Pourriture", "attempts": 1, "firstTry": true }
+        ]
+      },
+      {
+        "day": 6,
+        "bosses": [
+          { "name": "Chevalier du Creuset / Chimère guerrière", "attempts": 35, "firstTry": false },
+          { "name": "Rykard, Seigneur du Blasphème (au katana)", "attempts": 9, "firstTry": false },
+          { "name": "Alecto, meneuse des Couteaux noirs", "attempts": 8, "firstTry": false },
+          { "name": "Duo Sanctechair", "attempts": 4, "firstTry": false },
+          { "name": "Apôtre à la peau divine et Noble à la peau divine", "attempts": 12, "firstTry": false },
+          { "name": "Astel, Né du Vide", "attempts": 3, "firstTry": false },
+          { "name": "Chevalier du Creuset", "attempts": 2, "firstTry": false },
+          { "name": "Géant de feu", "attempts": 2, "firstTry": false },
+          { "name": "Bols, chevalier de Caria", "attempts": 1, "firstTry": true },
+          { "name": "Adula, dragon de pierre d'éclat", "attempts": 1, "firstTry": true },
+          { "name": "Tueur de Réprouvés", "attempts": 1, "firstTry": true },
+          { "name": "Troll fossoyeur", "attempts": 1, "firstTry": true },
+          { "name": "Larme imitatrice", "attempts": 1, "firstTry": true },
+          { "name": "Esprit ancestral royal", "attempts": 1, "firstTry": true }
+        ]
+      },
+      {
+        "day": 7,
+        "bosses": [
+          { "name": "Mohg, Seigneur du Sang", "attempts": 45, "firstTry": false },
+          { "name": "Maliketh, la Lame Noire", "attempts": 22, "firstTry": false },
+          { "name": "Sir Gideon Ofnir, l'Omniscient", "attempts": 12, "firstTry": false },
+          { "name": "Loretta, chevalière de l'Arbre d'Halig", "attempts": 6, "firstTry": false },
+          { "name": "Astel, Étoiles des Ténèbres", "attempts": 4, "firstTry": false },
+          { "name": "Avatar Putride", "attempts": 4, "firstTry": false },
+          { "name": "Seigneur Dragon Placidusax", "attempts": 2, "firstTry": false },
+          { "name": "Mohg le Réprouvé", "attempts": 1, "firstTry": true },
+          { "name": "Duo de vaillantes gargouilles", "attempts": 1, "firstTry": true }
+        ]
+      }
+
+    ]
+}
