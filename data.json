@@ -1,18 +1,18 @@
 {
   "global": {
-    "bossesVaincus": 83,
+    "bossesVaincus": 84,
     "totalBosses": 165,
-    "bossesMajeursVaincus": 11,
-    "totalBossesMajeurs": 15,
+    "bossesMajeursVaincus": 14,
+    "totalBossesMajeurs": 14,
     "mortsTotales": 1027,
     "firstTry": 27,
-    "moyenneTentatives": 10.28,
+    "moyenneTentatives": 10.38,
     "zonesVisitees": 17,
     "zonesTotale": 18
   },
   "stream": {
     "joursDeRun": 9,
-    "streamTime": "189h",
+    "streamTime": "190h14",
     "gameTime": "95h45",
     "subs": 1414,
     "quetesAccomplies": 10

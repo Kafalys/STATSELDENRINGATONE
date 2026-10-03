@@ -291,7 +291,7 @@ function renderTimeline() {
             ? bosses
                 .map(boss => `<span class="timeline-boss">${boss.name}</span>`)
                 .join("")
-            : `<span class="timeline-empty">Aucun boss majeur vaincu ce jour-là</span>`;
+            : `<span class="timeline-empty">Aucun boss principal vaincu ce jour-là</span>`;
 
         item.innerHTML = `
             <div class="timeline-day">JOUR ${day}</div>
