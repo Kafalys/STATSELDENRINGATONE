@@ -74,8 +74,7 @@ function renderSummary() {
     setText("stream-time", stream.streamTime ?? "—");
     setText("game-time", stream.gameTime ?? "—");
     setText("subs", formatNumber(stream.subs));
-    setText("shop-points", formatNumber(stream.shopPoints));
-}
+    setText("quests-completed", formatNumber(stream.quetesAccomplies));}
 
 function getDays() {
     return [...(RUN_DATA.days || [])].sort((a, b) => a.day - b.day);
@@ -179,36 +178,60 @@ function renderDay(day) {
 
 function renderTopFive() {
     const list = $("top-five-list");
+    const featured = $("top-five-featured");
 
-    list.innerHTML = "";
+    if (list) list.innerHTML = "";
+    if (featured) featured.innerHTML = "";
 
-    let previous = null;
-    let rank = 0;
+    const bosses = RUN_DATA.topAttempts || [];
+    if (bosses.length === 0) return;
 
-    (RUN_DATA.topAttempts || []).forEach((boss, index) => {
+    const first = bosses[0];
 
-        if (boss.attempts !== previous) {
-            rank = index + 1;
-            previous = boss.attempts;
+    if (featured) {
+        featured.innerHTML = `
+            <span class="featured-rank">01</span>
+            <span class="featured-name">${first.boss}</span>
+            <span class="featured-attempts">${formatNumber(first.attempts)}</span>
+            <span class="featured-label">TENTATIVES</span>
+            <span class="featured-death-percent" id="malenia-death-percent"></span>
+        `;
+
+        // Pourcentage affiché uniquement pour Malenia :
+        // (tentatives - 1) / mortsTotales * 100
+        const totalDeaths = Number(RUN_DATA.global?.mortsTotales);
+        const attempts = Number(first.attempts);
+
+        if (
+            first.boss === "Malenia, Blade of Miquella" &&
+            Number.isFinite(totalDeaths) &&
+            totalDeaths > 0 &&
+            Number.isFinite(attempts)
+        ) {
+            const percentage = ((attempts - 1) / totalDeaths) * 100;
+            const percentElement = $("malenia-death-percent");
+
+            if (percentElement) {
+                percentElement.textContent =
+                    `${percentage.toFixed(2).replace(".", ",")} % des morts totales`;
+            }
         }
+    }
 
+    bosses.slice(1, 5).forEach((boss, index) => {
         const row = document.createElement("div");
-
         row.className = "rank-row";
-
         row.innerHTML = `
-            <span class="rank-number">${String(rank).padStart(2, "0")}</span>
+            <span class="rank-number">${String(index + 2).padStart(2, "0")}</span>
             <span class="rank-name">${boss.boss}</span>
             <span class="rank-value">
                 ${formatNumber(boss.attempts)}
                 tentative${boss.attempts > 1 ? "s" : ""}
             </span>
         `;
-
-        list.appendChild(row);
+        if (list) list.appendChild(row);
     });
 }
-
 function renderRecords() {
     const r = RUN_DATA.records || {};
 
@@ -249,49 +272,32 @@ function renderRecords() {
 
 function renderTimeline() {
     const timeline = $("timeline");
-
     timeline.innerHTML = "";
 
-    const days = [...(RUN_DATA.days || [])]
-        .sort((a, b) => a.day - b.day);
-
+    const days = RUN_DATA.days || [];
     const majorBosses = RUN_DATA.majorBosses || [];
 
     days.forEach(dayData => {
-        const bosses = majorBosses.filter(
-            boss => boss.day === dayData.day
-        );
+        const day = dayData.day;
+
+        // Keep every recorded run day. Only bosses with an assigned day
+        // are considered defeated major bosses.
+        const bosses = majorBosses.filter(boss => boss.day === day);
 
         const item = document.createElement("div");
-
         item.className = "timeline-item";
 
-        let bossesHTML = "";
-
-        if (bosses.length > 0) {
-            bossesHTML = bosses
-                .map(
-                    boss =>
-                        `<span class="timeline-boss">${boss.name}</span>`
-                )
-                .join("");
-        } else {
-            bossesHTML = `
-                <span class="timeline-empty">
-                    Aucun boss majeur vaincu
-                </span>
-            `;
-        }
+        const bossesHTML = bosses.length
+            ? bosses
+                .map(boss => `<span class="timeline-boss">${boss.name}</span>`)
+                .join("")
+            : `<span class="timeline-empty">Aucun boss majeur vaincu ce jour-là</span>`;
 
         item.innerHTML = `
-            <div class="timeline-day">
-                JOUR ${dayData.day}
-            </div>
-
+            <div class="timeline-day">JOUR ${day}</div>
             <div class="timeline-dot-wrap">
                 <span class="timeline-dot"></span>
             </div>
-
             <div class="timeline-bosses">
                 ${bossesHTML}
             </div>
@@ -300,7 +306,6 @@ function renderTimeline() {
         timeline.appendChild(item);
     });
 }
-
 async function init() {
     try {
 

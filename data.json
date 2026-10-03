@@ -1,21 +1,21 @@
 {
   "global": {
-    "bossesVaincus": 81,
+    "bossesVaincus": 83,
     "totalBosses": 165,
-    "bossesMajeursVaincus": 10,
+    "bossesMajeursVaincus": 11,
     "totalBossesMajeurs": 15,
-    "mortsTotales": 782,
+    "mortsTotales": 1027,
     "firstTry": 27,
-    "moyenneTentatives": 6.54,
+    "moyenneTentatives": 10.28,
     "zonesVisitees": 17,
     "zonesTotale": 18
   },
   "stream": {
-    "joursDeRun": 7,
-    "streamTime": "147h",
+    "joursDeRun": 9,
+    "streamTime": "189h",
     "gameTime": "68h32",
-    "subs": 1310,
-    "shopPoints": 48500
+    "subs": 1408,
+    "quetesAccomplies": 10
   },
   "days": [
     { "day": 1, "bossesVaincus": 5, "morts": 27 },
@@ -25,18 +25,19 @@
     { "day": 5, "bossesVaincus": 19, "morts": 137 },
     { "day": 6, "bossesVaincus": 13, "morts": 60 },
     { "day": 7, "bossesVaincus": 8, "morts": 237 },
-    { "day": 8, "bossesVaincus": null, "morts": null }
+    { "day": 8, "bossesVaincus": 0, "morts": 116 },
+    { "day": 9, "bossesVaincus": 3, "morts": 111 }
   ],
   "topAttempts": [
-    { "boss": "Malenia, Blade of Miquella", "attempts": 9999 },
+    { "boss": "Malenia, Blade of Miquella", "attempts": 320 },
     { "boss": "Mogh le seigneur de sang", "attempts": 45 },
     { "boss": "Oiseau de mort", "attempts": 39 },
-    { "boss": "Chevalier du Creuset / Chimère guerrière", "attempts": 35 },
-    { "boss": "Godrick le Greffé", "attempts": 33 }
+    { "boss": "Duo Chevalier du Creuset et Chimère guerrière", "attempts": 35 },
+    { "boss": "Egalité: Godrick le Greffé / Sentinelle draconique de l'Arbre", "attempts": 33 }
   ],
   "records": {
     "bossLePlusDeTentatives": "Malenia, Blade of Miquella",
-    "bossLePlusDeTentativesValeur": 9999,
+    "bossLePlusDeTentativesValeur": 320,
     "jourPlusDeBoss": 5,
     "jourPlusDeMorts": 7
   },
@@ -45,17 +46,16 @@
     { "name": "Godrick le Greffé", "day": 2 },
     { "name": "Rennala, Reine de la Pleine Lune", "day": 3 },
     { "name": "Radahn, Fléau des Astres", "day": 4 },
-    { "name": "Rykard, Seigneur du Blasphème", "day": 6 },
-    { "name": "Morgott, Roi des Réprouvés", "day": 4 },
     { "name": "Godfrey, premier Seigneur d'Elden", "day": 4 },
-    { "name": "Mohg, Seigneur du Sang", "day": 7 },
+    { "name": "Morgott, Roi des Réprouvés", "day": 4 },
     { "name": "Géant de Feu", "day": 6 },
-    { "name": "Maliketh, la Lame d'Ébène", "day": 7 },
-    { "name": "Radagon de l'Ordre d'Or", "day": null },
-    { "name": "Bête d'Elden", "day": null },
-    { "name": "Hoarah Loux, guerrier", "day": null },
+    { "name": "Rykard, Seigneur du Blasphème", "day": 6 },
     { "name": "Seigneur dragon Placidusax", "day": 7 },
-    { "name": "Malenia, Blade of Miquella", "day": null }             
+    { "name": "Mohg, Seigneur du Sang", "day": 7 },
+    { "name": "Maliketh, la Lame d'Ébène", "day": 7 },
+    { "name": "Malenia, Blade of Miquella", "day": 9 },             
+    { "name": "Hoarah Loux, le guerrier", "day": 9 },
+    { "name": "Radagon de l'Ordre d'Or / Bête d'Elden", "day": 9 }
   ],
   "bossesByDay": [
     {
@@ -143,7 +143,7 @@
       {
         "day": 6,
         "bosses": [
-          { "name": "Chevalier du Creuset / Chimère guerrière", "attempts": 35, "firstTry": false },
+          { "name": "Due Chevalier du Creuset / Chimère guerrière", "attempts": 35, "firstTry": false },
           { "name": "Rykard, Seigneur du Blasphème (au katana)", "attempts": 9, "firstTry": false },
           { "name": "Alecto, meneuse des Couteaux noirs", "attempts": 8, "firstTry": false },
           { "name": "Duo Sanctechair", "attempts": 4, "firstTry": false },
@@ -172,7 +172,19 @@
           { "name": "Mohg le Réprouvé", "attempts": 1, "firstTry": true },
           { "name": "Duo de vaillantes gargouilles", "attempts": 1, "firstTry": true }
         ]
+      },
+      {
+        "day": 8,
+        "bosses": [
+        ]
+      },
+      {
+        "day": 9,
+        "bosses": [
+          { "name": "Malenia, Blade of Miquella", "attempts": 320, "firstTry": false },
+          { "name": "Hoarah Loux, le guerrier", "attempts": 3, "firstTry": false },
+          { "name": "Radagon de l'Ordre d'Or / Bête d'Elden", "attempts": 19, "firstTry": false }
+        ]
       }
-
     ]
 }
