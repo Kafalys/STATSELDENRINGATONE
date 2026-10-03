@@ -48,8 +48,8 @@ function renderSummary() {
     );
 
     setText(
-        "major-bosses",
-        `${formatNumber(g.bossesMajeursVaincus)} / ${formatNumber(g.totalBossesMajeurs)}`
+        "final-level",
+        g.niveauFinal == null ? "—" : formatNumber(g.niveauFinal)
     );
 
     setText("total-deaths", formatNumber(g.mortsTotales));
